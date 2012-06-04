@@ -7,7 +7,7 @@ gem 'rails', '3.2.5'
 
 gem 'capistrano'
 gem 'figaro'
-gem 'pg'
+gem 'sqlite3'
 gem 'pry'
 gem 'twilio-ruby'
 gem 'whenever'
