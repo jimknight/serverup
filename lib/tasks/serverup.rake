@@ -4,7 +4,7 @@ namespace :server do
   desc "is lavatech.com up?"
   task :up => :environment do
   	begin
-    	io = open("http://www.lavatech.com/asdk")
+    	io = open("http://www.lavatech.com/")
     	if io.status[0] != "200"
     		notify_down
     	end
