@@ -17,7 +17,7 @@ set :application, "serverup"
 set :scm, :git
 set :repository,  "."
 set :deploy_via, :copy
-set :deploy_to, "/home/#{user}/#{application}"
+set :deploy_to, "/home/#{user}/apps/#{application}"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
