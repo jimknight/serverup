@@ -3,7 +3,7 @@ set :whenever_command, "bundle exec whenever"
 require "whenever/capistrano"
 load 'deploy/assets'
 
-set   :domain,        "69.172.229.224"
+set   :domain,        "jimtimer.lavatech.com"
 role  :web,           domain
 role  :app,           domain
 role  :db,            domain, :primary => true
