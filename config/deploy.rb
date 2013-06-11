@@ -3,13 +3,13 @@ set :whenever_command, "bundle exec whenever"
 require "whenever/capistrano"
 load 'deploy/assets'
 
-set   :domain,        "jimtimer.lavatech.com"
+set   :domain,        "198.211.96.39"
 role  :web,           domain
 role  :app,           domain
 role  :db,            domain, :primary => true
 
 # Fill user in - if remote user is different to your local user
-set :user, "rails"
+set :user, "deployer"
 
 default_run_options[:pty] = true
 
