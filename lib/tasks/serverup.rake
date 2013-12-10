@@ -12,6 +12,15 @@ namespace :server do
     	notify_down
     	raise e
     end
+    begin
+      io = open("http://www.baysidelaw.com/")
+      if io.status[0] != "200"
+        notify_down
+      end
+    rescue => e
+      notify_down
+      raise e
+    end
   end
 end
 
@@ -22,6 +31,6 @@ def notify_down
 	@client.account.sms.messages.create(
 		:from => ENV["TWILIO_PHONE"],
 		:to => ENV["JIM_PHONE"],
-		:body => "lavatech.com is down!"
+		:body => "lavatech.com or baysidelaw.com is down!"
 	)
 end
